@@ -122,7 +122,6 @@ let updateItem = () => {
 
 // function to delete item
 let deleteItem = (index) => {
-  console.log("logg");
   foodDataBase.splice(index, 1);
   saveLocalStorage(foodDataBase);
   showItems();
