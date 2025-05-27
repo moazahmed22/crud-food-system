@@ -36,11 +36,15 @@ body {
           font-weight: 600;
           font-size: 14px;
         }
-        .submit {
+        button {
           background-color: var(--text-color);
           color: var(--background-color);
           font-weight: 600;
           font-size: 16px;
+        }
+        #updateBtn {
+          background-color: var(--background-color);
+          color: var(--accent-color);
         }
       }
       #items-container {
