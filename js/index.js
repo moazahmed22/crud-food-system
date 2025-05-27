@@ -21,7 +21,7 @@ let addItem = () => {
     objPrice: foodPrice.value,
     objCal: foodCalories.value,
     objCat: foodCategory.value,
-    objImg: foodImg.files[0].name,
+    objImg: foodImg.value,
   };
   foodDataBase.push(foodObject);
 
@@ -44,7 +44,7 @@ function showItems() {
                     class="img-container overflow-hidden bg-white w-100 text-center"
                   >
                     <img
-                      src="./asstes/images/${foodDataBase[index].objImg}"
+                      src="${foodDataBase[index].objImg}"
                       alt=""
                       class="w-100"
                     />
@@ -101,6 +101,7 @@ let itemToInputs = (index) => {
   foodPrice.value = foodDataBase[index].objPrice;
   foodCalories.value = foodDataBase[index].objCal;
   foodCategory.value = foodDataBase[index].objCat;
+  foodImg.value = foodDataBase[index].objImg;
   globalIndex = index;
   submitBtn.setAttribute("style", "display:none !important;");
   updateBtn.setAttribute("style", "display:block !important;");
@@ -111,6 +112,7 @@ let updateItem = () => {
   foodDataBase[globalIndex].objPrice = foodPrice.value;
   foodDataBase[globalIndex].objCal = foodCalories.value;
   foodDataBase[globalIndex].objCat = foodCategory.value;
+  foodDataBase[globalIndex].objImg = foodImg.value;
   submitBtn.setAttribute("style", "display:block !important;");
   updateBtn.setAttribute("style", "display:none !important;");
   clearInputs();
