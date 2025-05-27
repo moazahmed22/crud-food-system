@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud System</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <section id="header">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <div class="row">
+            <a class="col-12 text-decoration-none logo fw-bold ps-0" href="#"
+              >Crud Food System</a
+            >
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- main content section -->
+    <section id="main" class="vh-100 position-relative">
+      <div class="container">
+        <div class="row">
+          <!-- inputs section -->
+          <div
+            id="inputs-container"
+            class="col-md-3 d-flex flex-column position-fixed p-3 rounded-3"
+          >
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="foodName"
+                placeholder=""
+              />
+              <label for="floatingInput">Entry name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="foodPrice"
+                placeholder=""
+              />
+              <label for="floatingInput">Entry price</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="foodCalories"
+                placeholder=""
+              />
+              <label for="floatingInput">Entry calories</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="foodCategory"
+                placeholder=""
+              />
+              <label for="floatingInput">Entry category</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="file"
+                class="form-control"
+                id="foodImg"
+                placeholder=""
+                accept="image/*"
+              />
+              <label for="floatingInput">Entry picture</label>
+            </div>
+            <button class="btn submit" onclick="addItem()">submit</button>
+          </div>
+          <!-- item's container section -->
+          <div
+            id="items-container"
+            class="col-md-8 rounded-3 mt-md-0 mt-sm-4 ms-auto me-0 container"
+          >
+            <div id="myRow" class="row">
+              <!-- <div class="item p-2 col-md-6 col-xl-3 rounded-3">
+                <div
+                  class="item-card pb-3 d-flex flex-column align-items-center gap-3 rounded-3"
+                >
+                  <div
+                    class="img-container overflow-hidden bg-white w-100 text-center"
+                  >
+                    <img
+                      src="./asstes/images/alex-liver.webp"
+                      alt=""
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="d-flex flex-column container gap-1">
+                    <p class="item-title fs-5 m-0">
+                      <span>Alexandrian liver</span>
+                    </p>
+                    <p class="item-info m-0">
+                      <span class="">600 calories</span>
+                      <span class="dot"></span>
+                      <span>egyptian</span>
+                    </p>
+                    <div
+                      class="d-flex align-items-center justify-content-around"
+                    >
+                      <p class="price m-0 d-inline">6.20$</p>
+                      <div
+                        class="button-container d-flex justify-content-between align-items-end"
+                      >
+                        <i class="fa-solid fa-pen-to-square primary me-2"></i>
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/f636981cc6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
