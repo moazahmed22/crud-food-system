@@ -26,6 +26,7 @@ body {
     .row {
       #inputs-container {
         background-color: var(--accent-color);
+        overflow: auto;
         [type="text"] {
           color: var(--text-color);
           font-weight: 600;
@@ -109,6 +110,8 @@ body {
     }
   }
 }
+
+
 
 @media (max-width: 768px) {
   #main {

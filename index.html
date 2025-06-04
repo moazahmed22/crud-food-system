@@ -33,51 +33,91 @@
             <div class="form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input"
                 id="foodName"
                 placeholder=""
               />
               <label for="floatingInput">Entry name</label>
+              <div
+                class="alert alert-danger d-none"
+                id="nameAlert"
+                role="alert"
+              >
+                invalid [ could be two words 2 to 10 characters each ]
+              </div>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input"
                 id="foodPrice"
                 placeholder=""
               />
               <label for="floatingInput">Entry price</label>
+              <div
+                class="alert alert-danger d-none"
+                id="priceAlert"
+                role="alert"
+              >
+                [ min = 1 || max = 999 ]
+              </div>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input"
                 id="foodCalories"
                 placeholder=""
               />
               <label for="floatingInput">Entry calories</label>
+              <div class="alert alert-danger d-none" id="calAlert" role="alert">
+                invalid calorie number [ min = 100 || max = 1500]
+              </div>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input"
                 id="foodCategory"
                 placeholder=""
               />
               <label for="floatingInput">Entry category</label>
+              <div class="alert alert-danger d-none" id="catAlert" role="alert">
+                valid categories ["breakfast", "lunch", "dinner", "snacks"]
+              </div>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input"
                 id="foodImg"
                 placeholder=""
                 accept="image/*"
               />
               <label for="floatingInput">Entry picture</label>
+              <div
+                class="alert alert-danger d-none"
+                id="pictureAlert"
+                role="alert"
+              >
+                Enter a valid price
+              </div>
             </div>
-            <button class="btn d-block" id="submitBtn" onclick="addItem()">submit</button>
-            <button class="btn d-none" id="updateBtn" onclick="updateItem()">apply</button>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="searchInput"
+                placeholder=""
+              />
+              <label for="floatingInput">Search food</label>
+            </div>
+            <button class="btn d-block" id="submitBtn" onclick="addItem()">
+              submit
+            </button>
+            <button class="btn d-none" id="updateBtn" onclick="updateItem()">
+              apply
+            </button>
           </div>
           <!-- item's container section -->
           <div
@@ -123,6 +163,31 @@
               </div> -->
             </div>
           </div>
+        </div>
+      </div>
+      <!-- toast -->
+
+      <div class="toast-container position-fixed end-0 bottom-0">
+        <div
+          class="toast bg-dark text-white"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          id="alertToast"
+        >
+          <div class="toast-header bg-dark text-white">
+            <strong class="me-auto">Crud System</strong>
+            <small class="">just now</small>
+            <button
+              type="button"
+              class="bg-transparent d-flex justify-content-center align-items-center ms-2 border-0"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-close text-white"></i>
+            </button>
+          </div>
+          <div class="toast-body fw-medium">fields cannot be empty</div>
         </div>
       </div>
     </section>
